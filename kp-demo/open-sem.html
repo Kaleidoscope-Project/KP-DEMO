@@ -34,6 +34,15 @@
           border: 1px solid black; /* Example styling */
         }
     </style>
+
+    <script>
+    // Example to dispatch a resize event on an element
+    const cheerpjContainer = document.getElementById('cheerpj-app-container');
+    window.dispatchEvent(new Event('resize')); // May trigger a global resize event
+    if (cheerpjContainer) {
+    cheerpjContainer.dispatchEvent(new Event('resize')); // Target specific container
+    }
+    </script>
 </head>
 
 <body>
