@@ -69,13 +69,13 @@
         let initialDevicePixelRatio = window.devicePixelRatio;
 
        function handleZoomChange() {
-            const newDevicePixelRatio = window.devicePixelRatio;
+             newDevicePixelRatio = window.devicePixelRatio;
 
             if (newDevicePixelRatio !== initialDevicePixelRatio) {
                 console.log("Browser zoom level changed!");
                 // Call your desired function here
         <!--        myCustomZoomFunction(newDevicePixelRatio);-->
-        <!--        initialDevicePixelRatio = newDevicePixelRatio; // Update for future comparisons-->
+                initialDevicePixelRatio = newDevicePixelRatio; // Update for future comparisons
             } else {
                 console.log("Window resized, but zoom level is the same.");
             }
