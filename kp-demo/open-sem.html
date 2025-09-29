@@ -74,6 +74,7 @@
             if (newDevicePixelRatio !== initialDevicePixelRatio) {
                 console.log("Browser zoom level changed!");
                 // Call your desired function here
+                repaintApp();
         <!--        myCustomZoomFunction(newDevicePixelRatio);-->
                 initialDevicePixelRatio = newDevicePixelRatio; // Update for future comparisons
             } else {
@@ -82,6 +83,12 @@
         }
 
         function repaintApp() {
+            console.log("repaintApp: repainting");
+            window.dispatchEvent(new Event('resize')); // May trigger a global resize event
+            const cheerpjContainer = document.getElementById('cheerpj-app-container');
+           if (cheerpjContainer) {
+               cheerpjContainer.dispatchEvent(new Event('resize')); // Target specific container
+           }
         }
 
         window.addEventListener('resize', handleZoomChange);
