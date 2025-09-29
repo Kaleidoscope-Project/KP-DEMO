@@ -37,11 +37,11 @@
 
     <script>
     // Example to dispatch a resize event on an element
-    const cheerpjContainer = document.getElementById('cheerpj-app-container');
-    window.dispatchEvent(new Event('resize')); // May trigger a global resize event
-    if (cheerpjContainer) {
-    cheerpjContainer.dispatchEvent(new Event('resize')); // Target specific container
-    }
+<!--    const cheerpjContainer = document.getElementById('swing-app-container');-->
+<!--    window.dispatchEvent(new Event('resize')); // May trigger a global resize event-->
+<!--    if (cheerpjContainer) {-->
+<!--        cheerpjContainer.dispatchEvent(new Event('resize')); // Target specific container-->
+<!--    }-->
     </script>
 </head>
 
@@ -76,7 +76,7 @@
                 // Call your desired function here
                 repaintApp();
         <!--        myCustomZoomFunction(newDevicePixelRatio);-->
-                initialDevicePixelRatio = newDevicePixelRatio; // Update for future comparisons
+<!--                initialDevicePixelRatio = newDevicePixelRatio; // Update for future comparisons-->
             } else {
                 console.log("Window resized, but zoom level is the same.");
             }
@@ -84,7 +84,7 @@
 
         function repaintApp() {
             console.log("repaintApp: repainting");
-            window.dispatchEvent(new Event('resize')); // May trigger a global resize event
+<!--            window.dispatchEvent(new Event('resize')); // May trigger a global resize event-->
             const cheerpjContainer = document.getElementById('cheerpj-app-container');
            if (cheerpjContainer) {
                cheerpjContainer.dispatchEvent(new Event('resize')); // Target specific container
